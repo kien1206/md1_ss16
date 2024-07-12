@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bt1</title>
+    <style>
+        ul {
+            list-style-type: disc;
+            font-size: 30px;
+            font-family: serif;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list"></ul>
+
+    <script>
+        var items = ["List item number 1", "List item number 2", "List item number 3"];
+        var list = document.getElementById('list');
+
+        items.forEach(function(item) {
+            var li = document.createElement('li');
+            li.textContent = item;
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html>

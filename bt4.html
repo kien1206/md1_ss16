@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #text {
+            font-size: 50px;
+            color: black;
+        }
+
+        .highlight {
+            color: red;
+            background-color: yellow;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">This text is optional</p>
+    <button id="toggleButton" onclick="toggleText()">Press to say hide text</button>
+
+    <script>
+        var flag = false;
+
+        function toggleText() {
+            var textElement = document.getElementById('text');
+            if (!flag) {
+                textElement.classList.add('highlight');
+                flag = true;
+            }
+        }
+    </script>
+</body>
+</html>

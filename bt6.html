@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        #itemInput {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #addButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        #addButton:hover {
+            background-color: #45a049;
+        }
+        ul {
+            font-size: 24px;
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <input type="text" id="itemInput" placeholder="Enter item">
+            <button id="addButton" onclick="addItem()">Add item</button>
+        </div>
+        <ul id="itemList">
+            <li>Item 1</li>
+            <li>Item 123</li>
+        </ul>
+    </div>
+
+    <script>
+        function addItem() {
+            var input = document.getElementById('itemInput');
+            var itemText = input.value.trim();
+
+            if (itemText !== "") {
+                var listItem = document.createElement('li');
+                listItem.textContent = itemText;
+                document.getElementById('itemList').appendChild(listItem);
+                input.value = "";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="nameList"></ul>
+
+    <script>
+        var names = ["Nguyễn Văn A", "Vũ Thị B", "Nguyễn Minh C"];
+        
+        function displayNames() {
+            var listElement = document.getElementById('nameList');
+            names.forEach(function(name) {
+                var listItem = document.createElement('li');
+                listItem.textContent = name;
+                listElement.appendChild(listItem);
+            });
+        }
+        
+        displayNames();
+    </script>
+</body>
+</html>
